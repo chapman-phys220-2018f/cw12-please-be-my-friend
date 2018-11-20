@@ -13,14 +13,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import numba as nb
-
+"""The purpose of this module is to calculate the solutions to that physics problem that Dressel gave us and plot their solutions paramentrically in the form (x(t), y(t))"""
 
 @nb.jit
 def Df(t, r, F):
+    """Returns the derivative of the function, where r is an array"""
     return (np.array([r[1], -0.25*r[1] + r[0] - r[0]**3 + F*np.cos(t)]))
 
 
 def stingray(F, x, y, N):
+    """Implements the Runge-Kutta 4th Order method"""
     cht = 0.001
     t = np.arange(0, 2*np.pi*N, cht)
     tk = len(t)
@@ -36,6 +38,7 @@ def stingray(F, x, y, N):
         ran[i+1] = ran[i] + ((k1 + 2*k2 + 2*k3 + k4)/6)
     return np.array([ran[:,0], ran[:,1]])
 def linegraph(gr, F, title):
+    """Graphs the results from stingray() on a line plot"""
     plt.plot(gr[0], gr[1], label="Oscillation")
     plt.title(title)
     plt.xlabel("x values")
@@ -45,6 +48,7 @@ def linegraph(gr, F, title):
     plt.show()
     
 def scattergraph(gr, F, title):
+    """Graphs the results from stingray() on a scatter plot"""
     plt.scatter(gr[0], gr[1], label="Scattered Oscillation", s=2)
     plt.title(title)
     plt.xlabel("x values")
