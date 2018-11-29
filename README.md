@@ -2,7 +2,7 @@
 
 # PHYS220/MATH220/CPSC220 CW 12
 
-**Author(s):** **CHANGEME**
+**Author(s):** Morgan Holve
 
 ## Specification
 
@@ -26,9 +26,7 @@ Your homework this week will be to finish this classwork assignment, and then us
 
 ## Assessment
 
-Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have. You can use the GitHub web interface to edit this file directly for now.
-
-**CHANGEME**
+VERY interesting that I learned, numba doesn't work for nested functions! It's really weird, and now that I think about it, Quinn told me that. Oh well, I rediscovered it for myself. Also, most of my problems with this stemmed from my inability to spell "sombrero" which I have mastered now so that won't cause any issues in the future.
 
 ## Honor Pledge
 
@@ -39,4 +37,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**YOURNAMES**
+Morgan Holve
